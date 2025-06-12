@@ -1,0 +1,54 @@
+header {
+  .navbar-container {
+    width: 1296px;
+  }
+  .badge-dot{
+    width: 20px;
+    height: 20px;
+    top: 0;
+    right: 0;
+  }
+
+/* 漢堡按鈕的樣式 */
+.navbar-toggler {
+  padding: 0.25rem 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: none;
+}
+
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: #333;
+  mask: url('data:image/svg+xml,%3csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 30 30%22%3e%3cpath stroke=%22rgba(0, 0, 0, 0.5)%22 stroke-width=%222%22 d=%22M4 7h22M4 15h22M4 23h22%22/%3e%3c/svg%3e') center / contain no-repeat;
+}
+
+/* 漢堡內部導航樣式 */
+.nav-link {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.btn {
+  font-size: 14px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  color: #000;
+}
+
+.btn:hover {
+  color: #007bff; /* 滑鼠懸停變為藍色 */
+}
+
+.text-dark {
+  color: #000;
+}
+
+.text-dark.mx-2 {
+  font-weight: 300;
+}
+}

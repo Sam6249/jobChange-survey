@@ -1,0 +1,24 @@
+.Swiper-lessonList {
+  .swiper-wrapper {
+    display: flex;
+    justify-content: start; /* Align items to the start */
+    padding: 0;
+  }
+
+  .swiper-slide a {
+    text-align: center; /* Optional: center the text and icons */
+    display: block;
+    min-width: 120px; /* Ensure a minimum width */
+  }
+}
+
+/* Target all pagination bullets */
+.lesson-phone,
+.teacher-desktop {
+  .swiper-pagination-bullet-active {
+    width: 20px;
+    border-radius: 50px;
+    color: #fff;
+    background: #007aff;
+  }
+}

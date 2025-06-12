@@ -1,0 +1,17 @@
+footer {
+  // border-radius: 48px 48px 0px 0px;
+  background: #455470;
+}
+.icon-circle {
+  font-size: 40px;
+  border: 2px solid white; /* 白色邊框 */
+  border-radius: 50%; /* 圓形效果 */
+  padding: 10px; /* 調整內部空間，讓圖標居中 */
+  display: inline-flex; /* 讓圖標垂直水平居中 */
+  align-items: center;
+  justify-content: center;
+}
+
+.font-size-14{
+  font-size: 14px;
+}
