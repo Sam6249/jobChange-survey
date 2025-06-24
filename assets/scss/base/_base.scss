@@ -1,32 +1,49 @@
-body{
-    font-family: 'Poppins', sans-serif;
-    background-color: #ebf3fc;
-    color: #212529;
-    background-image: url(/assets/images/L.jpg);
-    background-repeat: no-repeat; /* 防止背景圖片重複 */
-    background-size: contain; /* 背景圖片覆蓋整個頁面 */
-    background-attachment: fixed; /* 固定背景圖片 */
-}
-li{
-    list-style: none;
-}
-a{
-    text-decoration: none;
-    color: black;
-}
-img{
-    max-width: 100%;
-    height: auto;
-    display: block;
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #ebf3fc;
+  color: #212529;
+  min-height: 100vh;
 }
 
-p,span,strong{
-    letter-spacing: 0.05em;
-    line-height: 1.5;
-    margin: 0;
+.main-container {
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  position: relative;
 }
 
-h1,h2,h3,h4,h5,h6{
-    letter-spacing: 0.06em;
-    line-height: 1.2;
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+p,
+span,
+strong {
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 0.06em;
+  line-height: 1.2;
 }
