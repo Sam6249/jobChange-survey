@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>第一層試煉 - 精神吞噬者</title>
+    <style>
+      body {
+        min-height: 100vh;
+        background: #e9f0fa;
+      }
+      .monster-popup {
+        width: 360px;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translate(-80%, 20%);
+        background: rgba(0, 0, 0, 0.85);
+        border: 3px solid #ffb03a;
+        border-radius: 18px;
+        color: #fff;
+        padding: 1.5rem;
+        z-index: 10;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        opacity: 0;
+        transition: opacity 0.4s, transform 0.4s;
+        pointer-events: auto;
+        max-width: 90vw;
+        text-align: left;
+      }
+      .monster-popup.show {
+        opacity: 1;
+        transform: translate(-50%, 20%) scale(1);
+      }
+      .main-container {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: url('/jobChange-survey/assets/1-bg-569f98ff.png') no-repeat center;
+        background-size: contain;
+        overflow: hidden;
+      }
+      .bg-fade {
+        position: absolute;
+        inset: 0;
+        background: url('/jobChange-survey/assets/1-15d2aa1f.PNG') no-repeat center;
+        background-size: contain;
+        opacity: 0;
+        transition: opacity 1.2s;
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 12px;
+        right: 18px;
+        background: none;
+        border: none;
+        color: #ffb03a;
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 20;
+      }
+      .monster-title {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #ffb03a;
+        margin-bottom: 0.5rem;
+      }
+      .monster-desc {
+        font-size: 1.05rem;
+        line-height: 1.6;
+      }
+      .monster-img {
+        margin-top: auto;
+        overflow: hidden;
+        width: 450px;
+        display: block;
+      }
+      @media (max-width: 500px) {
+        .monster-popup {
+          padding: 1.2rem 0.5rem 1rem 0.5rem;
+          min-width: 0;
+        }
+        .monster-img {
+          width: 90vw;
+          max-width: 260px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="bg-fade"></div>
+      <div class="monster-popup" id="monsterPopup">
+        <button class="close-btn" id="closePopup">✕</button>
+        <div class="monster-title">LV1. 精神吞噬者</div>
+        <div class="monster-desc">
+          以吸取魔力為生的妖精，它會讓你的魔法精神逐漸枯竭，導致無法專注於任何事情。只有勇敢直面內心壓力，才能擊敗它！
+        </div>
+      </div>
+    </div>
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        const popup = document.getElementById('monsterPopup');
+        const closeBtn = document.getElementById('closePopup');
+        setTimeout(() => popup.classList.add('show'), 200);
+        // 6秒自動關閉
+        const timer = setTimeout(() => {
+          popup.classList.remove('show');
+          // TODO: 這裡可加入進入下一步流程的程式碼
+        }, 5000);
+        // 按叉叉關閉
+        closeBtn.addEventListener('click', () => {
+          popup.classList.remove('show');
+          clearTimeout(timer);
+          // TODO: 這裡可加入進入下一步流程的程式碼
+        });
+        // 3秒後漸變背景
+        setTimeout(() => {
+          document.querySelector('.bg-fade').style.opacity = 1;
+        }, 500);
+      });
+    </script>
+  </body>
+</html>

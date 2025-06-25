@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>魔法師對話</title>
+    
+    <style>
+      body {
+        min-height: 100vh;
+      }
+      .main-container {
+        max-width: 600px;
+        margin: 0 auto;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; /* 讓內容往下 */
+        align-items: center;
+        padding: 0 15px;
+        text-align: center;
+        /* background: #fff; 這行不要加 */
+        box-shadow: none; /* 不需要陰影 */
+        position: relative;
+        background: url('/jobChange-survey/assets/wizard-3d3e1f6b.png') no-repeat center center fixed;
+        background-size: contain;
+      }
+      .dialogue-container {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        pointer-events: none; /* 讓只有對話框可點擊 */
+      }
+      .wizard-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #ffe066;
+        background: #fff;
+        position: absolute;
+        left: -70px;
+        top: -60px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        display: none; /* 若有角色圖可顯示 */
+      }
+      .dialogue-box {
+        pointer-events: auto;
+        min-width: 320px;
+        width: 480px;
+        margin: 0 auto 32px auto;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 24px;
+        border: 4px solid #bf8c4a;
+        padding: 1.5rem 2rem 1.2rem 2rem;
+        position: relative;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+        /* 可加漸層邊框 */
+        font-size: 1.15rem;
+        color: #ffffff;
+        min-height: 80px;
+      }
+      .dialogue-name {
+        font-weight: bold;
+        color: #906bff;
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+        letter-spacing: 0.08em;
+      }
+      .dialogue-next {
+        position: absolute;
+        right: 24px;
+        bottom: 16px;
+        background: #ffb03a;
+        border: none;
+        border-radius: 1rem;
+        padding: 0.3rem 1.2rem;
+        font-weight: bold;
+        color: #000000;
+        cursor: pointer;
+        transition: background 0.2s;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      }
+      .dialogue-next:hover {
+        background: #ffd43b;
+      }
+    </style>
+    <script type="module" crossorigin src="/jobChange-survey/assets/wizard-3365976f.js"></script>
+    <link rel="modulepreload" crossorigin href="/jobChange-survey/assets/modulepreload-polyfill-3cfb730f.js">
+    <link rel="stylesheet" href="/jobChange-survey/assets/all-f7138a4e.css">
+  </head>
+  <body>
+    <div class="main-container d-flex justify-content-between">
+      <div class="dialogue-container">
+        <div class="dialogue-box">
+          <div class="dialogue-name">(？？？)</div>
+          <hr>
+          <div id="dialogueText" class="text-start mb-12">
+            歡迎來到魔法試煉之地，勇敢的冒險者！你準備好接受挑戰了嗎？
+          </div>
+          <button class="dialogue-next" id="nextBtn">繼續</button>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>

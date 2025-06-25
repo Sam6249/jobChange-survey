@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>請輸入您的資訊</title>
+    
+    <style>
+      body {
+        min-height: 100vh;
+        background: url("/jobChange-survey/assets/gate-332b8d70.png") no-repeat center
+          center/cover;
+      }
+      .info-container {
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 20px;
+        padding: 3rem 2.5rem;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+        max-width: 350px;
+        width: 100%;
+        text-align: center;
+        margin: auto;
+      }
+      .info-title {
+        color: #ffe066;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+      }
+      .info-label {
+        color: #fff;
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        text-align: left;
+        display: block;
+      }
+      .info-input {
+        width: 100%;
+        padding: 0.7rem 1rem;
+        border-radius: 2rem;
+        border: none;
+        margin-bottom: 1.2rem;
+        font-size: 1.1rem;
+        background: #e9f0fa;
+        color: #1a237e;
+        font-weight: bold;
+        outline: none;
+      }
+      .info-btn {
+        width: 100%;
+        padding: 0.7rem;
+        border-radius: 1.5rem;
+        border: none;
+        background: #ffe066;
+        color: #222;
+        font-weight: bold;
+        font-size: 1.1rem;
+        letter-spacing: 0.1em;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .info-btn:hover {
+        background: #ffd43b;
+      }
+    </style>
+    <link rel="stylesheet" href="/jobChange-survey/assets/all-f7138a4e.css">
+  </head>
+  <body>
+    <div class="main-container d-flex justify-content-between">
+      <form class="info-container" id="infoForm">
+        <div class="info-title">請輸入您的資訊</div>
+        <label class="info-label" for="name">您的名稱</label>
+        <input
+          class="info-input"
+          id="name"
+          name="name"
+          type="text"
+          placeholder="請輸入姓名"
+          required
+        />
+        <label class="info-label" for="exp">工作資歷</label>
+        <input
+          class="info-input"
+          id="exp"
+          name="exp"
+          type="text"
+          placeholder="例如：1年2個月"
+          required
+        />
+        <button class="info-btn" type="submit">提交</button>
+      </form>
+    </div>
+    <script>
+      document
+        .getElementById("infoForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const name = document.getElementById("name").value;
+          const exp = document.getElementById("exp").value;
+          localStorage.setItem("userName", name);
+          localStorage.setItem("userExp", exp);
+          window.location.href = "success.html";
+        });
+    </script>
+  </body>
+</html>

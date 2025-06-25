@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>註冊成功</title>
+    
+    <style>
+      body {
+        min-height: 100vh;
+        background: url("/jobChange-survey/assets/gate-332b8d70.png") no-repeat center
+          center/cover;
+      }
+      .success-container {
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 20px;
+        padding: 2.5rem 3rem;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+        margin: auto;
+      }
+      .success-title {
+        color: #ffe066;
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+        line-height: 2.2rem;
+      }
+      .success-desc {
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 10px;
+        color: #333;
+        font-size: 1rem;
+        padding: 1.2rem 1rem;
+        margin-bottom: 2rem;
+        text-align: left;
+      }
+      .success-btn {
+        width: 80%;
+        padding: 0.7rem;
+        border-radius: 1.5rem;
+        border: none;
+        background: #ffe066;
+        color: #222;
+        font-weight: bold;
+        font-size: 1.1rem;
+        letter-spacing: 0.1em;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .success-btn:hover {
+        background: #ffd43b;
+      }
+    </style>
+    <link rel="stylesheet" href="/jobChange-survey/assets/all-f7138a4e.css">
+  </head>
+  <body>
+    <div class="main-container d-flex justify-content-between">
+      <div class="success-container">
+        <div class="success-title" id="successTitle"></div>
+        <div class="success-desc">
+          <p>
+            歡迎來到魔法試煉！透過回答一系列問題，你將認識你的魔法屬性並獲得專屬建議。準備好開始了嗎？
+          </p>
+          <p class="mt-4">
+            此測驗大約<font class="text-primary">20分鐘</font
+            >，回答時請根據直覺或經驗回答，無須想太久
+          </p>
+        </div>
+        <button
+          class="success-btn"
+          onclick="window.location.href='wizard.html'"
+        >
+          進入試煉
+        </button>
+      </div>
+    </div>
+    <script>
+      const name = localStorage.getItem("userName") || "學員";
+      document.getElementById(
+        "successTitle"
+      ).innerHTML = `${name}，恭喜你註冊成功，<br>現在可以進入你的魔法試煉囉`;
+    </script>
+  </body>
+</html>
