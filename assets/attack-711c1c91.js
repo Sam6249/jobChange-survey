@@ -2,11 +2,11 @@
 // 能量球攻擊動畫元件
 
 const ENERGY_BALLS = [
-  { key: 'land',  img: '/assets/images/land.png' }, // 左下
-  { key: 'water', img: '/assets/images/water.png' }, // 中下
-  { key: 'wind',  img: '/assets/images/wind.png' }, // 右下
-  { key: 'light', img: '/assets/images/light.png' }, // 左上
-  { key: 'fire',  img: '/assets/images/fire.png' }, // 右上
+  { key: 'land',  img: 'https://github.com/Sam6249/jobChange-survey/blob/main/assets/images/land.png?raw=true' }, // 左下
+  { key: 'water', img: 'https://github.com/Sam6249/jobChange-survey/blob/main/assets/images/water.png?raw=true' }, // 中下
+  { key: 'wind',  img: 'https://github.com/Sam6249/jobChange-survey/blob/main/assets/images/wind.png?raw=true' }, // 右下
+  { key: 'light', img: 'https://github.com/Sam6249/jobChange-survey/blob/main/assets/images/light.png?raw=true' }, // 左上
+  { key: 'fire',  img: 'https://github.com/Sam6249/jobChange-survey/blob/main/assets/images/fire.png?raw=true' }, // 右上
 ];
 
 /**
@@ -141,7 +141,7 @@ export function showAttackAnimation({ onAttackEnd, parentSelector } = {}) {
       bgFade.parentNode.appendChild(flash);
       setTimeout(() => flash.remove(), 250);
       // 換背景圖
-      bgFade.style.background = 'url("/assets/images/1-bg.png") no-repeat center';
+      bgFade.style.background = 'url("../assets/images/1-bg.png") no-repeat center';
       bgFade.style.backgroundSize = 'contain';
     }
     setTimeout(() => {
