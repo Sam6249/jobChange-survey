@@ -2,11 +2,11 @@
 // 能量球攻擊動畫元件
 
 const ENERGY_BALLS = [
-  { key: 'land',  img: '../assets/images/land.png' }, // 左下
-  { key: 'water', img: '../assets/images/water.png' }, // 中下
-  { key: 'wind',  img: '../assets/images/wind.png' }, // 右下
-  { key: 'light', img: '../assets/images/light.png' }, // 左上
-  { key: 'fire',  img: '../assets/images/fire.png' }, // 右上
+  { key: 'land',  img: '../images/land.png' }, // 左下
+  { key: 'water', img: '../images/water.png' }, // 中下
+  { key: 'wind',  img: '../images/wind.png' }, // 右下
+  { key: 'light', img: '../images/light.png' }, // 左上
+  { key: 'fire',  img: '../images/fire.png' }, // 右上
 ];
 
 /**
