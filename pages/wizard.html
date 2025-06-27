@@ -8,21 +8,9 @@
       body {
         min-height: 100vh;
       }
-      .main-container {
-        max-width: 600px;
-        margin: 0 auto;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end; /* 讓內容往下 */
-        align-items: center;
-        padding: 0 15px;
-        text-align: center;
-        /* background: #fff; 這行不要加 */
-        box-shadow: none; /* 不需要陰影 */
-        position: relative;
-        background: url('../assets/images/wizard.png') no-repeat center;
-        background-size: contain;
+      .bg-wizard {
+        background: url("../assets/images/wizard.png") no-repeat center;
+        background-size: cover;
       }
       .dialogue-container {
         position: fixed;
@@ -82,7 +70,7 @@
         color: #000000;
         cursor: pointer;
         transition: background 0.2s;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
       }
       .dialogue-next:hover {
         background: #ffd43b;
@@ -90,11 +78,11 @@
     </style>
   </head>
   <body>
-    <div class="main-container d-flex justify-content-between">
+    <div class="main-container bg-wizard d-flex justify-content-between">
       <div class="dialogue-container">
         <div class="dialogue-box">
           <div class="dialogue-name">(學院導師)</div>
-          <hr>
+          <hr />
           <div id="dialogueText" class="text-start mb-12">
             歡迎來到魔法試煉之地，勇敢的冒險者！你準備好接受挑戰了嗎？
           </div>
@@ -103,9 +91,9 @@
       </div>
     </div>
     <script type="module">
-      import Typer from '../assets/typer.js';
-      const dialogueText = document.getElementById('dialogueText');
-      const nextBtn = document.getElementById('nextBtn');
+      import Typer from "../assets/typer.js";
+      const dialogueText = document.getElementById("dialogueText");
+      const nextBtn = document.getElementById("nextBtn");
       const dialogues = [
         "哦，新的魔法學徒來了！歡迎你～讓我來為你介紹這座試煉神殿吧。",
         "神殿共有 10 層，每層都有一隻魔獸，分別與你在職場中的挑戰相對應。你必須依靠不同屬性的魔法來擊倒他們。",
