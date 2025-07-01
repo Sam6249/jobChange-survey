@@ -9,11 +9,12 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <style>
-      body {
-        min-height: 100vh;
-        background: #e9f0fa;
+      .main-container {
+        background-image: url("/jobChange-survey/assets/1-bg-569f98ff.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center top;
       }
-
       .monster-popup,
       .explanation-popup {
         width: 400px;
@@ -23,9 +24,6 @@
         transform: translate(-80%, 20%);
         background: rgba(0, 0, 0, 0.85);
         border: 3px solid #ffb03a;
-        border-radius: 18px;
-        color: #fff;
-        padding: 1.5rem;
         z-index: 10;
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
         opacity: 0;
@@ -57,7 +55,6 @@
         background-size: contain;
         opacity: 0;
         transition: opacity 1.2s;
-        z-index: 1;
         pointer-events: none;
       }
 
@@ -180,8 +177,7 @@
         border: 2px solid #ffb03a;
       }
 
-      .option-btn:hover,
-      .option-btn:focus {
+      .option-btn:hover{
         box-shadow: 0 4px 24px #ffb03a55;
 
         color: #ffb03a;
@@ -208,13 +204,13 @@
         }
       }
     </style>
-    <script type="module" crossorigin src="/jobChange-survey/assets/main-bcfd9486.js"></script>
-    <link rel="stylesheet" href="/jobChange-survey/assets/main-b59b9af0.css">
+    <script type="module" crossorigin src="/jobChange-survey/assets/main-4810c5a8.js"></script>
+    <link rel="stylesheet" href="/jobChange-survey/assets/main-6e11ada5.css">
   </head>
   <body>
     <div class="main-container position-relative">
       <div class="bg-fade"></div>
-      <div class="monster-popup" id="monsterPopup">
+      <div class="monster-popup text-white rounded-4 p-6" id="monsterPopup">
         <button class="close-btn" id="closePopup">✕</button>
         <div class="monster-title">LV1. 精神吞噬者</div>
         <div class="monster-desc">
@@ -223,7 +219,7 @@
       </div>
 
       <div
-        class="explanation-popup position-absolute top-50 start-50 translate-middle"
+        class="explanation-popup text-white p-6 position-absolute top-50 start-50 translate-middle rounded-4"
         id="explanationPopup"
       >
         <button class="close-btn" id="closeExplanation">✕</button>
@@ -231,16 +227,16 @@
         <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="/jobChange-survey/assets/intro-4aa33051.PNG" alt="說明圖1" />
+              <img src="/jobChange-survey/assets/intro-a1467d93.PNG" alt="說明圖1" />
             </div>
             <div class="swiper-slide">
-              <img src="/jobChange-survey/assets/intro1-ec1e7b1c.PNG" alt="說明圖2" />
+              <img src="/jobChange-survey/assets/intro1-a65284ca.PNG" alt="說明圖2" />
             </div>
             <div class="swiper-slide">
-              <img src="/jobChange-survey/assets/intro2-ee289b4c.PNG" alt="說明圖3" />
+              <img src="/jobChange-survey/assets/intro2-c3a67e84.PNG" alt="說明圖3" />
             </div>
             <div class="swiper-slide">
-              <img src="/jobChange-survey/assets/intro3-4ee9851d.PNG" alt="說明圖4" />
+              <img src="/jobChange-survey/assets/intro3-bd8c8415.PNG" alt="說明圖4" />
             </div>
           </div>
           <div class="swiper-pagination"></div>
@@ -272,12 +268,7 @@
         const explanationPopup = document.getElementById("explanationPopup");
         const closeMonsterBtn = document.getElementById("closePopup");
         const closeExplanationBtn = document.getElementById("closeExplanation");
-        const mainContainer = document.querySelector(".main-container");
-        if (mainContainer) {
-          mainContainer.style.backgroundImage = "none";
-        }
 
-        // Initialize Swiper
         const swiper = new Swiper(".swiper", {
           pagination: {
             el: ".swiper-pagination",
@@ -286,7 +277,7 @@
         });
 
         // Show monster popup
-        setTimeout(() => monsterPopup.classList.add("show"), 200);
+        setTimeout(() => monsterPopup.classList.add("show"), 1000);
 
         // Function to show explanation popup
         const showExplanation = () => {
@@ -295,7 +286,7 @@
         };
 
         // 6秒自動關閉monster並顯示說明
-        const timer = setTimeout(showExplanation, 5000);
+        const timer = setTimeout(showExplanation, 4000);
 
         // 按叉叉關閉monster並顯示說明
         closeMonsterBtn.addEventListener("click", () => {
@@ -314,7 +305,7 @@
         // 3秒後漸變背景
         setTimeout(() => {
           document.querySelector(".bg-fade").style.opacity = 1;
-        }, 500);
+        }, 400);
 
         document.querySelectorAll(".option-btn").forEach((btn, idx) => {
           btn.addEventListener("click", () => {
@@ -393,7 +384,7 @@
           {
             question: "當魔法導師指派你一項新的任務時，你會怎麼看待這場試煉？",
             options: [
-              "我以平常心接受這場試煉，能完成多少就算多少",
+              "我會以平常心接受這場試煉，能完成多少就算多少",
               "我會感到魔力不穩，有時懷疑自己施法是否足夠應對",
               "我總是傾盡所有魔力，只為在導師面前留下光輝記錄"
             ]
@@ -441,10 +432,10 @@
               showQuestion();
             } else {
               // 題庫結束
-              document.getElementB/jobChange-survey/assets/attack-711c1c91.jsy').style.display = 'none';
+              document.getElementById('questionOverlay').style.display = 'none';
               document.getElementById('questionPopup').style.display = 'none';
               // 顯示能量球攻擊動畫
-              import('../assets/attack.js').then(({ showAttackAnimation }) => {
+              import('/jobChange-survey/assets/attack-217d53f2.js').then(({ showAttackAnimation }) => {
                 showAttackAnimation({
                   onAttackEnd: () => {
                     // 動畫結束後可在這裡進行後續流程

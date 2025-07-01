@@ -6,54 +6,30 @@
     <title>請輸入您的資訊</title>
     
     <style>
-      body {
-        min-height: 100vh;
+      .main-container {
+        background-image: url("/jobChange-survey/assets/gate-332b8d70.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center top;
       }
+      /* 按鈕間距 */
+
       .info-container {
         background: rgba(0, 0, 0, 0.7);
         border-radius: 20px;
-        padding: 3rem 2.5rem;
-        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
-        max-width: 350px;
-        width: 100%;
-        text-align: center;
-        margin: auto;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.7);
+        max-width: 360px;
       }
-      .info-title {
-        color: #ffe066;
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin-bottom: 1.5rem;
-      }
-      .info-label {
-        color: #fff;
-        font-size: 1.1rem;
-        margin-bottom: 0.5rem;
-        text-align: left;
-        display: block;
-      }
+
       .info-input {
-        width: 100%;
-        padding: 0.7rem 1rem;
         border-radius: 2rem;
-        border: none;
-        margin-bottom: 1.2rem;
         font-size: 1.1rem;
-        background: #e9f0fa;
-        color: #1a237e;
-        font-weight: bold;
-        outline: none;
       }
       .info-btn {
-        width: 100%;
-        padding: 0.7rem;
         border-radius: 1.5rem;
-        border: none;
         background: #ffe066;
-        color: #222;
-        font-weight: bold;
-        font-size: 1.1rem;
         letter-spacing: 0.1em;
+        font-size: 1.1rem;
         cursor: pointer;
         transition: background 0.2s;
       }
@@ -61,32 +37,40 @@
         background: #ffd43b;
       }
     </style>
-    <script type="module" crossorigin src="/jobChange-survey/assets/main-bcfd9486.js"></script>
-    <link rel="stylesheet" href="/jobChange-survey/assets/main-b59b9af0.css">
+    <script type="module" crossorigin src="/jobChange-survey/assets/main-4810c5a8.js"></script>
+    <link rel="stylesheet" href="/jobChange-survey/assets/main-6e11ada5.css">
   </head>
   <body>
     <div class="main-container d-flex justify-content-between">
-      <form class="info-container" id="infoForm">
-        <div class="info-title">請輸入您的資訊</div>
-        <label class="info-label" for="name">您的名稱</label>
+      <form class="info-container px-12 py-16 m-auto" id="infoForm">
+        <div class="info-title text-success-20 fw-bold fs-6 mb-6">
+          請輸入您的資訊
+        </div>
+        <label class="info-label text-white mb-2 d-block text-start" for="name"
+          >您的名稱</label
+        >
         <input
-          class="info-input"
+          class="info-input w-100 px-3 py-2 border-0 mb-5 fw-bold text-primary-dark"
           id="name"
           name="name"
           type="text"
           placeholder="請輸入姓名"
           required
         />
-        <label class="info-label" for="exp">工作資歷</label>
+        <label class="info-label text-white mb-2 d-block text-start" for="exp"
+          >工作資歷</label
+        >
         <input
-          class="info-input"
+          class="info-input w-100 px-3 py-2 border-0 mb-5 fw-bold text-primary-dark"
           id="exp"
           name="exp"
           type="text"
           placeholder="例如：1年2個月"
           required
         />
-        <button class="info-btn" type="submit">提交</button>
+        <button class="info-btn text-black fw-bold w-100 p-2" type="submit">
+          提交
+        </button>
       </form>
     </div>
     <script>

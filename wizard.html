@@ -5,57 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>魔法師對話</title>
     <style>
-      body {
-        min-height: 100vh;
-      }
-      .bg-wizard {
-        background: url("/jobChange-survey/assets/wizard-3d3e1f6b.png") no-repeat center;
-        background-size: cover;
+      .main-container {
+        background-image: url("/jobChange-survey/assets/wizard-3d3e1f6b.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center top;
       }
       .dialogue-container {
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0;
         z-index: 10;
-        display: flex;
-        justify-content: center;
         pointer-events: none; /* 讓只有對話框可點擊 */
-      }
-      .wizard-img {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 4px solid #ffe066;
-        background: #fff;
-        position: absolute;
-        left: -70px;
-        top: -60px;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-        display: none; /* 若有角色圖可顯示 */
       }
       .dialogue-box {
         pointer-events: auto;
         min-width: 320px;
         width: 480px;
-        margin: 0 auto 32px auto;
         background: rgba(0, 0, 0, 0.8);
-        border-radius: 24px;
         border: 4px solid #bf8c4a;
-        padding: 1.5rem 2rem 1.2rem 2rem;
-        position: relative;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
         /* 可加漸層邊框 */
-        font-size: 1.15rem;
-        color: #ffffff;
+        font-size: 18px;
         min-height: 80px;
       }
       .dialogue-name {
-        font-weight: bold;
-        color: #906bff;
-        margin-bottom: 0.5rem;
-        font-size: 1.1rem;
+        font-size: 18px;
         letter-spacing: 0.08em;
       }
       .dialogue-next {
@@ -64,10 +36,6 @@
         bottom: 16px;
         background: #ffb03a;
         border: none;
-        border-radius: 1rem;
-        padding: 0.3rem 1.2rem;
-        font-weight: bold;
-        color: #000000;
         cursor: pointer;
         transition: background 0.2s;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -76,20 +44,20 @@
         background: #ffd43b;
       }
     </style>
-    <script type="module" crossorigin src="/jobChange-survey/assets/wizard-3b993e10.js"></script>
-    <link rel="modulepreload" crossorigin href="/jobChange-survey/assets/main-bcfd9486.js">
-    <link rel="stylesheet" href="/jobChange-survey/assets/main-b59b9af0.css">
+    <script type="module" crossorigin src="/jobChange-survey/assets/wizard-a5750e64.js"></script>
+    <link rel="modulepreload" crossorigin href="/jobChange-survey/assets/main-4810c5a8.js">
+    <link rel="stylesheet" href="/jobChange-survey/assets/main-6e11ada5.css">
   </head>
   <body>
     <div class="main-container bg-wizard d-flex justify-content-between">
-      <div class="dialogue-container">
-        <div class="dialogue-box">
-          <div class="dialogue-name">(學院導師)</div>
+      <div class="dialogue-container position-fixed start-0 end-0 bottom-0 d-flex justify-content-center">
+        <div class="dialogue-box px-8 py-6 mx-auto mb-8 rounded-4 text-white position-relative">
+          <div class="dialogue-name text-primary-purple fw-bold mb-4">(學院導師)</div>
           <hr />
           <div id="dialogueText" class="text-start mb-12">
             歡迎來到魔法試煉之地，勇敢的冒險者！你準備好接受挑戰了嗎？
           </div>
-          <button class="dialogue-next" id="nextBtn">繼續</button>
+          <button class="dialogue-next fw-bold rounded-pill position-absolute px-4 py-1" id="nextBtn">繼續</button>
         </div>
       </div>
     </div>

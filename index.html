@@ -15,8 +15,23 @@
       rel="stylesheet"
     />
     <title>homepage</title>
-    <script type="module" crossorigin src="/jobChange-survey/assets/main-bcfd9486.js"></script>
-    <link rel="stylesheet" href="/jobChange-survey/assets/main-b59b9af0.css">
+    <style>
+      .main-container {
+        background-image: url("/jobChange-survey/assets/gate-332b8d70.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center top;
+      }
+      /* 按鈕間距 */
+      .btn-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 30px;
+      }
+    </style>
+    <script type="module" crossorigin src="/jobChange-survey/assets/main-4810c5a8.js"></script>
+    <link rel="stylesheet" href="/jobChange-survey/assets/main-6e11ada5.css">
   </head>
   <body>
     <div class="main-container d-flex justify-content-between">
@@ -43,8 +58,8 @@
       <div class="modal fade" id="helpModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
           <div
-            class="modal-content"
-            style="background: rgba(255 255 255 / 0.8); border-radius: 15px"
+            class="modal-content rounded-4"
+            style="background: rgb(255, 238, 208);"
           >
             <div class="modal-body text-center position-relative">
               <button
@@ -57,7 +72,7 @@
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <div class="px-2">
-                      <h5 class="fw-bold mb-3">1. 你是一名「魔法學徒」</h5>
+                      <h5 class="fw-bold my-3">1. 你是一名「魔法學徒」</h5>
                       <p class="text-start m-6">
                         即將進入「轉職魔法學院」參加試煉。通過組織氣氛、工作環境、人際關係等10大試煉，解鎖自己的魔法屬性並發現適合的未來方向。
                       </p>
@@ -65,11 +80,8 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="px-2">
-                      <h5 class="fw-bold mb-3">2. 透過魔法試煉，你將會：</h5>
-                      <ul
-                        class="text-start d-inline-block p-0 my-4"
-                        style="font-size: 1rem"
-                      >
+                      <h5 class="fw-bold my-3">2. 透過魔法試煉，你將會：</h5>
+                      <ul class="text-start d-inline-block p-0 my-4 fs-4">
                         <li>
                           - 了解你的職場狀態：心理健康、團隊合作、薪資滿意度等。
                         </li>
@@ -84,11 +96,8 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="px-2">
-                      <h5 class="fw-bold mb-3">3. 完成魔法試煉很簡單：</h5>
-                      <ul
-                        class="text-start d-inline-block p-0 my-4"
-                        style="font-size: 1rem"
-                      >
+                      <h5 class="fw-bold my-3">3. 完成魔法試煉很簡單：</h5>
+                      <ul class="text-start d-inline-block p-0 my-4 fs-4">
                         <li>
                           1. 回答幾個簡單的魔法問題（大約需要 15~30 分鐘）
                         </li>
