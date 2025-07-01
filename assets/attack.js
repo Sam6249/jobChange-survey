@@ -108,7 +108,7 @@ export function showAttackAnimation({ onAttackEnd, parentSelector } = {}) {
   // 依序顯示能量球
   attackDiv.style.display = 'flex';
   attackDiv.querySelectorAll('.energy-ball').forEach((ball, idx) => {
-    setTimeout(() => ball.classList.add('show'), idx * 120);
+    setTimeout(() => ball.classList.add('show'), idx * 100);
   });
 
   // 發動攻擊動畫
@@ -134,7 +134,7 @@ export function showAttackAnimation({ onAttackEnd, parentSelector } = {}) {
     const bgFade = document.querySelector('.bg-fade');
     if (bgFade) {
       bgFade.classList.add('shake');
-      setTimeout(() => bgFade.classList.remove('shake'), 500);
+      setTimeout(() => bgFade.classList.remove('shake'), 2000);
       // 閃爍特效
       const flash = document.createElement('div');
       flash.className = 'bg-hit-flash';
